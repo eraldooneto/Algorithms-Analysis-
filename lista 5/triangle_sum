@@ -13,7 +13,7 @@ int minSumPath(vector<vector<int> >& A)
 	for (int i = A.size() - 2; i >= 0; i--)
 		for (int j = 0; j < A[i].size(); j++)
 			memo[j] = A[i][j] + min(memo[j],
-									memo[j + 1]);
+				  memo[j + 1]);
 
 	// return the top element
 	return memo[0];
